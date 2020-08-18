@@ -1,0 +1,14 @@
+# Datasource
+datasource:
+  url: jdbc:h2:./database/db-demojpa;DB_CLOSE_DELAY=1;DB_CLOSE_ON_EXIT=FALSE
+  username: sa
+  password:
+  driver-class-name: org.h2.Driver
+# JPA
+jpa:
+  hibernate:
+    ddl-auto: update
+  database-platform: org.hibernate.dialect.H2Dialect
+  properties:
+    hibernate:
+      show_sql: true

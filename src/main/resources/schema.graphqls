@@ -1,0 +1,27 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    # Retrieve All Product Entity
+    getProducts: [Product]
+    # Retrieved By Uuid Product Entity
+    getProductByUuid (uuid: ID): Product
+}
+
+type Mutation {
+    createProduct (name: String, value: Float, quantity: Float): Product
+}
+
+# Product Entity
+type Product {
+    uuid: ID
+    name: String!
+    value: Float
+    quantity: Float
+    createdDate: String
+    updatedDate: String
+}
+
+
