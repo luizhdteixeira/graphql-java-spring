@@ -1,5 +1,6 @@
 package com.luizhdteixeira.graphqljavaspring.graphqls.dto;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -7,7 +8,7 @@ public class ProductDTO {
 
     private UUID uuid;
     private String name;
-    private Double value;
+    private BigDecimal value;
     private Double quantity;
     private LocalDate createdDate;
     private LocalDate updatedDate;
@@ -28,11 +29,11 @@ public class ProductDTO {
         this.name = name;
     }
 
-    public Double getValue() {
+    public BigDecimal getValue() {
         return value;
     }
 
-    public void setValue(Double value) {
+    public void setValue(BigDecimal value) {
         this.value = value;
     }
 

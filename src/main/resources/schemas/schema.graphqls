@@ -7,7 +7,7 @@ type Query {
     # Retrieve All Product Entity
     getProducts: [Product]
     # Retrieved By Uuid Product Entity
-    getProductByUuid (uuid: ID): Product
+    getProductByUuid (uuid: String): Product
 }
 
 type Mutation {
@@ -16,8 +16,8 @@ type Mutation {
 
 # Product Entity
 type Product {
-    uuid: ID
-    name: String!
+    uuid: String
+    name: String
     value: Float
     quantity: Float
     createdDate: String

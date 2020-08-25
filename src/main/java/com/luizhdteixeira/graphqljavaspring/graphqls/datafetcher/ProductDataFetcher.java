@@ -6,7 +6,6 @@ import graphql.schema.DataFetcher;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class ProductDataFetcher {
@@ -21,7 +20,7 @@ public class ProductDataFetcher {
         return productGraphqlFacadeService::getProducts;
     }
 
-    public DataFetcher<Optional<ProductDTO>> getProductByUuid() {
+    public DataFetcher<ProductDTO> getProductByUuid() {
         return productGraphqlFacadeService::getProductByUuid;
     }
 

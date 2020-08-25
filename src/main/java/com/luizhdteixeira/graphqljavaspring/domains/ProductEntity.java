@@ -27,6 +27,24 @@ public class ProductEntity implements Serializable {
     @UpdateTimestamp
     private LocalDate updatedDate;
 
+    // Default
+    public ProductEntity() {
+    }
+
+    // Create Product
+    public ProductEntity(String name, BigDecimal value, Double quantity) {
+        this.name = name;
+        this.value = value;
+        this.quantity = quantity;
+    }
+
+    // Update Product
+    public ProductEntity(String name, BigDecimal value, Double quantity, LocalDate createdDate) {
+        this.name = name;
+        this.value = value;
+        this.quantity = quantity;
+    }
+
     public UUID getUuid() {
         return uuid;
     }

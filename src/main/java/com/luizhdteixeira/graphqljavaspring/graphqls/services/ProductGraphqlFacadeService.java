@@ -5,10 +5,11 @@ import graphql.schema.DataFetchingEnvironment;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 public interface ProductGraphqlFacadeService {
 
     List<ProductDTO> getProducts(DataFetchingEnvironment dfe);
-    Optional<ProductDTO> getProductByUuid(DataFetchingEnvironment dfe);
+    ProductDTO getProductByUuid(DataFetchingEnvironment dfe);
     ProductDTO createProduct(DataFetchingEnvironment dfe);
 }

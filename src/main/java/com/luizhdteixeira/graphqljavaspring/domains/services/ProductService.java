@@ -5,6 +5,7 @@ import com.luizhdteixeira.graphqljavaspring.domains.ProductEntity;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface ProductService {
 
